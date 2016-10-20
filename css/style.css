@@ -1,9 +1,7 @@
 body {
   font-family: 'Microsoft YaHei';
-}
-section {
+  min-width: 1400px;
   background-color: #01c26f;
-
 }
 
 .title {
@@ -19,10 +17,13 @@ section {
 .title .title-en {
   font-size: 24px;
   color: #00c26e;
-  font-weight: 400;
+  font-weight: 200;
 }
 
-
+.logo {
+  width: 107px;
+  height: 44px;
+}
 
 .navbar {
   margin-bottom: 0;
@@ -37,25 +38,32 @@ section {
 }
 .nav>li>a:focus, .nav>li>a:hover {
   background-color: transparent;
+  border-color: transparent;
 }
+
 .nav>li {
   margin-right: 20px;
 }
-@media (min-width: 900px) {
-  .content-container {
-    min-width: 960px;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
+
 @media (max-width: 1400px) {
-  section {
+  body {
      background-color: transparent;
   }
+  .big-card {
+    box-shadow: none!important;
+  }
 }
 
 
 
+.header-container {
+  position: relative;
+  top: 1px;
+}
 .header-container .content-container {
   background-color: #fff;
   border-radius: 20px 20px 0 0;
@@ -67,11 +75,28 @@ section {
   background-color: #fff;
   border-radius: 0 0 20px 20px;
 }
+.about-container {
+  background: #f7f8fc;
+}
+.about-container .content-container {
+  background: #f7f8fc;
+  padding-bottom: 100px;
+}
+.footer-container .content-container {
+  background: #00c26e;
+  padding: 100px 0;
+  height: 252px;
+}
+.footer-container .footer-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .partner-container {
   background-color: #fff;
 }
 .header-container {
-  padding-top: 50px;
+  /*padding-top: 50px;*/
 }
 .banner-container {
   position: relative;
@@ -102,14 +127,15 @@ section {
 .product-container .nav-tabs>li {
   display: inline-block;
   float: none;
+  margin-right: 0;
 }
 .product-container .nav-tabs>li>a {
   padding: 0;
   width: 84px;
   height: 22px;
   line-height: 22px;
-  color: #000;
-  background: fff;
+  color: #333;
+  background: #fff;
   border-radius: 0;
 }
 .product-container .nav-tabs>li.active>a {
@@ -122,6 +148,8 @@ section {
 .product-container .product-item {
   text-align: center;
   margin-bottom: 20px;
+  width: 244px;
+  float: left;
 }
 .product-container .product-icon-container {
   width: 122px;
@@ -140,6 +168,17 @@ section {
   height: 80px;
   background: url(../img/service/tab1/1.png) center center no-repeat;
   background-size: contain;
+}
+.product-container .product-list {
+  width: 1220px;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #666;
+}
+.product-container .product-list-2 {
+  width: 732px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .product-container .product-item.active {
   color: #00c26e;
@@ -194,29 +233,34 @@ section {
   margin: 0;
 }
 
-.solution-container .content-container{
-  padding-bottom: 80px;
-}
 
+.solution-container .solution-list {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1160px;
+}
 .solution-container .solution-list-1 {
   border-bottom: 1px solid #eee;
 }
 .solution-container .solution-item {
   position: relative;
+  float: left;
   height: 260px;
-  padding-top: 50px;
+  width: 290px;
+  padding: 50px 40px 0;
   border-right: 1px solid #eee;
-  background: url(../img/number/01.png) 15px 20px no-repeat;
-  background-size: 81px 66px;
+  color: #666;
+  background: url(../img/number/01.png) 40px 40px no-repeat;
+  background-size: 102px 66px;
 }
 .solution-container .solution-item:after {
   content: '';
   position: absolute;
   width: 57px;
-  height: 94px;
+  height: 100px;
   top: 0;
-  right: 15px;
-  background: url(../img/solution/1.png) center 20px no-repeat;
+  right: 40px;
+  background: url(../img/solution/1.png) center 25px no-repeat;
   background-size: contain;
 }
 
@@ -270,25 +314,30 @@ section {
   padding-top: 80px;
 }
 .partner-container .partner-list {
-  margin-bottom: 70px;
+  padding-bottom: 90px;
+  text-align: center;
 }
 .partner-container .partner-item {
   text-align: center;
 }
 .partner-container .partner-logo {
   height: 66px;
+  display: inline-block;
+  margin: 0 40px;
 }
 
 
-.about-container {
-  padding-bottom: 80px;
-  background: #f7f8fc;
-}
 .about-container .about-list {
-  margin-top: 60px;
+  margin: 60px auto 0;
+  width: 1200px;
   text-align: left;
+  overflow: hidden;
 }
 
+.about-container .about-item {
+  width: 300px;
+  float: left;
+}
 .about-container .about-item-content {
   background: url(../img/number/01-lg.png) 80% center no-repeat;
   background: none\9!important;
@@ -307,15 +356,17 @@ section {
 }
 .about-container .about-desc {
   height: 50px;
+  color: #666;
 }
 
-.footer-container {
-  background: #00c26e;
-  padding: 100px 0;
-}
+
 .footer-container .footer-left {
   font-size: 14px;
   color: #fff;
+  float: left;
+}
+.footer-container .footer-right {
+  float: right;
 }
 .footer-container .links {
   margin-bottom: 10px;
@@ -331,17 +382,24 @@ section {
   background: #fff;
   margin-top: -140px;
   border-radius: 14px;
-  padding: 58px 10px;
+  padding: 58px 36px;
+  box-shadow: 0 0 14px 1px rgba(0, 124, 70, .2);
 }
-.footer-container .card-qrcode {
+.footer-container .card-qrcode-container {
   width: 125px;
   height: 125px;
   float: left;
   margin: 0 24px 0;
+  border: 1px solid #bababa;
+  padding: 4px;
+}
+.footer-container .card-qrcode {
+  width: 100%;
 }
 .footer-container .card-info {
   float: left;
   max-width: 60%;
+  padding-right: 24px;
 }
 .footer-container .card-title {
   font-size: 30px;
@@ -354,4 +412,14 @@ section {
   font-size: 14px;
   color: #666;
   text-align: left;
+}
+.big-card {
+  width: 1400px;
+  margin: 50px auto 0;
+  border-radius: 20px;
+  box-shadow: 0 0 14px 1px rgba(0, 124, 70, .6);
+}
+
+.solution-more-link {
+  display: none;
 }
