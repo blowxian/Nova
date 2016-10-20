@@ -41,11 +41,20 @@ section {
 .nav>li {
   margin-right: 20px;
 }
-.content-container {
-  min-width: 960px;
-  max-width: 1400px;
-  margin: 0 auto;
+@media (min-width: 900px) {
+  .content-container {
+    min-width: 960px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
+@media (max-width: 1400px) {
+  section {
+     background-color: transparent;
+  }
+}
+
+
 
 .header-container .content-container {
   background-color: #fff;
@@ -204,7 +213,7 @@ section {
   content: '';
   position: absolute;
   width: 57px;
-  height: 74px;
+  height: 94px;
   top: 0;
   right: 15px;
   background: url(../img/solution/1.png) center 20px no-repeat;
@@ -261,7 +270,7 @@ section {
   padding-top: 80px;
 }
 .partner-container .partner-list {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 .partner-container .partner-item {
   text-align: center;
@@ -281,10 +290,10 @@ section {
 }
 
 .about-container .about-item-content {
-  background: url(../img/number/01-lg.png) 15px center no-repeat;
+  background: url(../img/number/01-lg.png) 80% center no-repeat;
   background: none\9!important;
   background-size: contain;
-  max-width: 170px;
+  max-width: 180px;
   margin: 0 auto;
 }
 .about-container .about-item-2 .about-item-content {background-image: url(../img/number/02-lg.png);}
@@ -292,7 +301,7 @@ section {
 .about-container .about-item-4 .about-item-content {background-image: url(../img/number/04-lg.png);}
 
 .about-container .about-title {
-  text-align: right;
+  text-align: left;
   font-size: 24px;
   color: #666;
 }
@@ -317,21 +326,29 @@ section {
 }
 .footer-container .card {
   text-align: center;
-  width: 525px;
+  max-width: 525px;
   height: 243px;
   background: #fff;
   margin-top: -140px;
-  border-radius: 20px;
-  padding: 50px 10px;
+  border-radius: 14px;
+  padding: 58px 10px;
 }
 .footer-container .card-qrcode {
   width: 125px;
   height: 125px;
+  float: left;
+  margin: 0 24px 0;
+}
+.footer-container .card-info {
+  float: left;
+  max-width: 60%;
 }
 .footer-container .card-title {
-  font-size: 32px;
+  font-size: 30px;
   color: #333;
   text-align: left;
+  position: relative;
+  top: -4px;
 }
 .footer-container .card-item {
   font-size: 14px;
